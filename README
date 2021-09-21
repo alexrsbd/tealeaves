@@ -1,0 +1,17 @@
+Sage Tea Leaves automates the analysis of Black Duck sage_says.json files
+
+Sage analyzes your Black Duck scanning best practices to uncover areas of opportunity, and point out issues that may be causing performance problems.
+Tea Leaves reads your sage_says.json file and reports back specific violations, as well as clean up suggestions.
+
+It will specifically call out
+	- Projects with too many versions
+	- Versions with too many scans
+	- Versions with no scans mapped to it
+	- Unmapped scans
+
+All of those are indicative of poor scanning practices, and cause the system to have to maintain an overwhelming amount of unnecessary of data. Often too much data to be useful.
+Sage gathers and labels the areas of opportunity, and Tea Leaves parses it out into a digestible report with clean up suggestions.
+
+Usage: python3 tealeaves.py /path/to/sage_says.json
+
+Tea Leaves does not use any nonstandard libraries, so it should not require any additional install instructions. It does not take any additional options. If the number of records for a particular category is too large it will persist those results to an appropriately named file.
